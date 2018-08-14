@@ -1,0 +1,30 @@
+<% include part/header %>
+<div class = "row">
+<% blogs.forEach(function(data){ %>
+           <div class="col-md-3 col-sm-6">
+        <div class="img-thumbnail">
+        
+          <img  src= " <%= data.image %> " >  
+            <div class="caption">
+              <ul>
+                <li class="displayitem">Name: <%= data.name %></li>
+                <li class="displayitem">Sex :<%= data.sex %></li>
+                <li class="displayitem">Desc:<%= data.description.substring(0,15)%>....</li>
+                <li class="displayitem">Date:<%= data.date.toDateString() %></li>
+                <li class="displayitem">
+                <form action="/index/<%= data._id %>?_method=Delete" method="POST" >
+                <button class="ui red button">Delete</button>
+                </form>  
+                <button class="ui yellow button"><a class="ui orange" href="/index/<%= data.id %>/edit">Edit </a></button>
+                <button class="ui green button"><a href="/index/<%= data.id %>">More</a></button></li>
+             
+              </ul>
+              
+    
+            </div>
+        </div>
+    </div>
+<% }) %>
+
+</div>
+<% include part/footer %>

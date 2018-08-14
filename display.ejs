@@ -1,0 +1,15 @@
+<% include part/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Name: <%= display.name %></div>
+        <div class="ui top attached segment">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= display.image %>">
+            <div class="content">
+                <span>Date: <%= display.date.toDateString() %></span>
+            </div>
+            <div class="description">
+                <p>Description:</br> <%- display.description %></p>
+            </div>
+        </div>
+        </div>
+</div>

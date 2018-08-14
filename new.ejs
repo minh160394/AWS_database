@@ -1,0 +1,24 @@
+<% include part/header %>
+<form class="ui form" action="/index" method="POST" >
+  <div class="field">
+    <h1>Add New Pets :</h1>
+    <label>Name</label>
+    <input type="text" name="dogs[name]" placeholder="First Name">
+  </div>
+  <div class="field">
+    <label>Image Url</label>
+    <input type="text" name="dogs[image]" placeholder="URL/Copy address Link">
+  </div>
+  <div class="field">
+     <label>Sex</label>
+    <select multiple="" name="dogs[sex]" class="ui dropdown">
+         <option value="Male">Male</option>
+          <option value="Female">Female</option>
+      </select>
+  </div>
+  <div class="field">
+    <label>Description:</label>
+    <textarea name="dogs[description]" rows="4" cols="50"> </textarea>
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
